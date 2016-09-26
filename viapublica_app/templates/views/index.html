@@ -1,0 +1,16 @@
+{% extends 'views/base/base.html' %}
+
+{% block main %}
+  <div class="sign-up-agileinfo">
+    <div class="alert-close"></div>
+    <form method="POST" class="reclamo-form" action="{% url 'reclamo_alta' %}">
+      {% csrf_token %}
+      {{formulario_reclamo}}
+
+      <input type="submit" class="save btn btn-default" value="Save">
+      <div id="map-canvas"></div>
+    </form>
+  </div>
+  <div class="lat">-</div>
+  <div class="lng">-</div>
+{% endblock %}
